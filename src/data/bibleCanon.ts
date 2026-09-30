@@ -1,0 +1,81 @@
+export interface BibleBookInfo {
+  id: string; // e.g. GEN, EXO, MAT, ROM, REV
+  name: string; // 創世記
+  shortName: string; // 創
+  testament: 'OT' | 'NT';
+  category: '律法書' | '歷史書' | '詩歌智慧書' | '大申言者書' | '小申言者書' | '福音書' | '歷史書(使徒行傳)' | '保羅書信' | '普通書信' | '啟示錄';
+  totalChapters: number;
+  theme: string;
+}
+
+export const BIBLE_66_BOOKS: BibleBookInfo[] = [
+  // 舊約 (39 卷)
+  { id: 'GEN', name: '創世記', shortName: '創', testament: 'OT', category: '律法書', totalChapters: 50, theme: '神原初的創造、撒但的敗壞、神的呼召以及三代選民的經歷與神聖定旨' },
+  { id: 'EXO', name: '出埃及記', shortName: '出', testament: 'OT', category: '律法書', totalChapters: 40, theme: '基督是神子民的救贖、拯救與供應，並神居所的建造' },
+  { id: 'LEV', name: '利未記', shortName: '利', testament: 'OT', category: '律法書', totalChapters: 27, theme: '基督是一切祭物與節期，使蒙救贖的人敬拜神並過聖別生活' },
+  { id: 'NUM', name: '民數記', shortName: '民', testament: 'OT', category: '律法書', totalChapters: 36, theme: '神子民編組軍隊為神爭戰，並在曠野行進享受神聖引導與扶持' },
+  { id: 'DEU', name: '申命記', shortName: '申', testament: 'OT', category: '律法書', totalChapters: 34, theme: '重申律法、順從神命、承受美地為業的勸誡與預表' },
+  { id: 'JOS', name: '約書亞記', shortName: '書', testament: 'OT', category: '歷史書', totalChapters: 24, theme: '擊敗仇敵、據有美地、將包羅萬有的基督分給各支派為基業' },
+  { id: 'JDG', name: '士師記', shortName: '士', testament: 'OT', category: '歷史書', totalChapters: 21, theme: '以色列離棄神、遭仇敵轄制、悔改呼求並得士師拯救的循環' },
+  { id: 'RUT', name: '路得記', shortName: '得', testament: 'OT', category: '歷史書', totalChapters: 4, theme: '摩押女子路得揀選神、聯於基督家譜並得著至親救贖者的完滿預表' },
+  { id: '1SA', name: '撒母耳記上', shortName: '撒上', testament: 'OT', category: '歷史書', totalChapters: 31, theme: '祭司職分衰落，神興起拿細耳人撒母耳與大衛以帶進神在地上的國度' },
+  { id: '2SA', name: '撒母耳記下', shortName: '撒下', testament: 'OT', category: '歷史書', totalChapters: 24, theme: '大衛作王治理神百姓、建都錫安、大衛之約與建造聖殿的預備' },
+  { id: '1KI', name: '列王紀上', shortName: '王上', testament: 'OT', category: '歷史書', totalChapters: 22, theme: '所羅門王建造聖殿、極其榮耀，但隨後國度分裂為南北二國' },
+  { id: '2KI', name: '列王紀下', shortName: '王下', testament: 'OT', category: '歷史書', totalChapters: 25, theme: '南北國諸王衰亡墮落、以利亞與以利沙職事、聖殿被焚與百姓被擄' },
+  { id: '1CH', name: '歷代志上', shortName: '代上', testament: 'OT', category: '歷史書', totalChapters: 29, theme: '神在人類歷史中主宰的揀選與大衛為建造聖殿所作的預備' },
+  { id: '2CH', name: '歷代志下', shortName: '代下', testament: 'OT', category: '歷史書', totalChapters: 36, theme: '所羅門建造與奉獻聖殿，猶大諸王在聖殿敬拜上的復興與被擄' },
+  { id: 'EZR', name: '以斯拉記', shortName: '拉', testament: 'OT', category: '歷史書', totalChapters: 10, theme: '被擄歸回重建神的殿，並藉神的話重新構成神聖別的子民' },
+  { id: 'NEH', name: '尼希米記', shortName: '尼', testament: 'OT', category: '歷史書', totalChapters: 13, theme: '重建耶路撒冷城牆，恢復神的治理與分別防衛的界線' },
+  { id: 'EST', name: '以斯帖記', shortName: '斯', testament: 'OT', category: '歷史書', totalChapters: 10, theme: '神在隱密中主宰保護受壓迫的選民，擊敗哈曼陰謀' },
+  { id: 'JOB', name: '約伯記', shortName: '伯', testament: 'OT', category: '詩歌智慧書', totalChapters: 42, theme: '剝奪天然的完全與自義，使人得著神自己作榮耀與生命' },
+  { id: 'PSA', name: '詩篇', shortName: '詩', testament: 'OT', category: '詩歌智慧書', totalChapters: 150, theme: '敬虔之人向神的情感與讚美，藉基督、神的殿與神國度的顯明達到頂點' },
+  { id: 'PRO', name: '箴言', shortName: '箴', testament: 'OT', category: '詩歌智慧書', totalChapters: 31, theme: '神聖智慧的彰顯與指引，教導人在神聖性情中生活處事' },
+  { id: 'ECC', name: '傳道書', shortName: '傳', testament: 'OT', category: '詩歌智慧書', totalChapters: 12, theme: '日光之下萬事虛空的虛空，惟有敬畏神、活在神聖永遠裡方為實際' },
+  { id: 'SNG', name: '雅歌', shortName: '歌', testament: 'OT', category: '詩歌智慧書', totalChapters: 8, theme: '佳偶與良人（信徒與基督）神聖羅曼史的生長、成熟與被提' },
+  { id: 'ISA', name: '以賽亞書', shortName: '賽', testament: 'OT', category: '大申言者書', totalChapters: 66, theme: '小聖經：神審判與管教，並那受苦受膏之僕人基督帶進的救贖與新天新地' },
+  { id: 'JER', name: '耶利米書', shortName: '耶', testament: 'OT', category: '大申言者書', totalChapters: 52, theme: '痛哭流淚的申言者警告背道，宣告基督作大衛公義的苗與新約的訂立' },
+  { id: 'LAM', name: '耶利米哀歌', shortName: '哀', testament: 'OT', category: '大申言者書', totalChapters: 5, theme: '哀悼聖城毀滅與聖殿被焚，但在黑暗中看見神每早晨更新的憐憫與信實' },
+  { id: 'EZK', name: '以西結書', shortName: '結', testament: 'OT', category: '大申言者書', totalChapters: 48, theme: '神的榮耀離去與審判，神活水江河之復興與榮耀聖殿的終極歸宿' },
+  { id: 'DAN', name: '但以理書', shortName: '但', testament: 'OT', category: '大申言者書', totalChapters: 12, theme: '諸天掌權與人類政權之巨像，神截定之七十個七與非人手所鑿之磐石' },
+  { id: 'HOS', name: '何西阿書', shortName: '何', testament: 'OT', category: '小申言者書', totalChapters: 14, theme: '行淫背道的新婦得蒙神不變永恆之愛的聘取與挽回' },
+  { id: 'JOL', name: '約珥書', shortName: '珥', testament: 'OT', category: '小申言者書', totalChapters: 3, theme: '蝗蟲之災與耶和華的日子，聖靈如甘霖普遍澆灌凡有血氣者' },
+  { id: 'AMO', name: '阿摩司書', shortName: '摩', testament: 'OT', category: '小申言者書', totalChapters: 9, theme: '審判諸國與以色列之公義，應許重新修造大衛倒塌的帳幕' },
+  { id: 'OBA', name: '俄巴底亞書', shortName: '俄', testament: 'OT', category: '小申言者書', totalChapters: 1, theme: '驕傲的以東受審判，國度歸於耶和華' },
+  { id: 'JON', name: '約拿書', shortName: '拿', testament: 'OT', category: '小申言者書', totalChapters: 4, theme: '約拿三日三夜在魚腹中預表基督復活，神的憐憫臨及外邦尼尼微' },
+  { id: 'MIC', name: '彌迦書', shortName: '彌', testament: 'OT', category: '小申言者書', totalChapters: 7, theme: '從伯利恆生出那位從亙古從太初而出的掌權者基督' },
+  { id: 'NAH', name: '那鴻書', shortName: '鴻', testament: 'OT', category: '小申言者書', totalChapters: 3, theme: '殘暴的尼尼微遭毀滅，神是忌邪施報與公義的避難所' },
+  { id: 'HAB', name: '哈巴谷書', shortName: '哈', testament: 'OT', category: '小申言者書', totalChapters: 3, theme: '義人必本於信得生，認識耶和華榮耀的知識要充滿全地如水充滿洋海' },
+  { id: 'ZEP', name: '西番雅書', shortName: '番', testament: 'OT', category: '小申言者書', totalChapters: 3, theme: '耶和華大而可畏之日子，神在錫安以祂的愛安息並向選民歡呼' },
+  { id: 'HAG', name: '哈該書', shortName: '該', testament: 'OT', category: '小申言者書', totalChapters: 2, theme: '顧念神被荒涼之殿，萬國所羨慕的基督必降臨這殿' },
+  { id: 'ZEC', name: '撒迦利亞書', shortName: '亞', testament: 'OT', category: '小申言者書', totalChapters: 14, theme: '異象啟示基督是神的同伴、謙遜騎驢進城、被扎者與眾聖徒降臨橄欖山' },
+  { id: 'MAL', name: '瑪拉基書', shortName: '瑪', testament: 'OT', category: '小申言者書', totalChapters: 4, theme: '責備祭司形式主義，應許公義的日頭基督升起其光線有醫治之能' },
+
+  // 新約 (27 卷)
+  { id: 'MAT', name: '馬太福音', shortName: '太', testament: 'NT', category: '福音書', totalChapters: 28, theme: '國度的福音：基督是君王救主，將諸天之國帶到地上' },
+  { id: 'MRK', name: '馬可福音', shortName: '可', testament: 'NT', category: '福音書', totalChapters: 16, theme: '福音的服事：基督是神的奴僕，為罪人服事捨命作多人的贖價' },
+  { id: 'LUK', name: '路加福音', shortName: '路', testament: 'NT', category: '福音書', totalChapters: 24, theme: '救恩的福音：基督是正確完全的人救主，滿帶憐憫與恩典尋找拯救失喪者' },
+  { id: 'JHN', name: '約翰福音', shortName: '約', testament: 'NT', category: '福音書', totalChapters: 21, theme: '生命的福音：基督是神的話與神聖生命，使信祂的人重生有分於永遠生命' },
+  { id: 'ACT', name: '使徒行傳', shortName: '徒', testament: 'NT', category: '歷史書(使徒行傳)', totalChapters: 28, theme: '復活升天的基督在聖靈裡藉門徒繁殖與擴展，產生在地上的眾召會' },
+  { id: 'ROM', name: '羅馬書', shortName: '羅', testament: 'NT', category: '保羅書信', totalChapters: 16, theme: '神的福音：將罪人作成神的兒子，構成基督的身體，顯為在地的召會' },
+  { id: '1CO', name: '哥林多前書', shortName: '林前', testament: 'NT', category: '保羅書信', totalChapters: 16, theme: '基督是召會一切難處的唯一解答與眾聖徒獨一的分' },
+  { id: '2CO', name: '哥林多後書', shortName: '林後', testament: 'NT', category: '保羅書信', totalChapters: 13, theme: '新約的執事與執事職事：藉基督患難的構成，瓦器盛裝榮耀至寶' },
+  { id: 'GAL', name: '加拉太書', shortName: '加', testament: 'NT', category: '保羅書信', totalChapters: 6, theme: '基督頂替律法，恩典對照肉體，活出新造並受聖靈引導' },
+  { id: 'EPH', name: '以弗所書', shortName: '弗', testament: 'NT', category: '保羅書信', totalChapters: 6, theme: '召會是基督的身體、那在萬有中充滿萬有者的豐滿，神永遠的經綸' },
+  { id: 'PHP', name: '腓立比書', shortName: '腓', testament: 'NT', category: '保羅書信', totalChapters: 4, theme: '經歷基督：以基督為生活、榜樣、目標、能力與秘訣' },
+  { id: 'COL', name: '歌羅西書', shortName: '西', testament: 'NT', category: '保羅書信', totalChapters: 4, theme: '包羅萬有的基督在凡事上居首位，作神的奧秘與召會的元首' },
+  { id: '1TH', name: '帖撒羅尼迦前書', shortName: '帖前', testament: 'NT', category: '保羅書信', totalChapters: 5, theme: '為著召會生活之信愛望的生活，等候主榮耀的降臨' },
+  { id: '2TH', name: '帖撒羅尼迦後書', shortName: '帖後', testament: 'NT', category: '保羅書信', totalChapters: 3, theme: '主顯現之審判與鼓勵，在等候基督回來時堅定作工' },
+  { id: '1TI', name: '提摩太前書', shortName: '提前', testament: 'NT', category: '保羅書信', totalChapters: 6, theme: '神在信仰裡的經綸，召會作為真理的柱石和根基與敬虔的奧秘' },
+  { id: '2TI', name: '提摩太後書', shortName: '提後', testament: 'NT', category: '保羅書信', totalChapters: 4, theme: '召會敗落中的得勝預備：堅守真理規範，作無愧的工人' },
+  { id: 'TIT', name: '提多書', shortName: '多', testament: 'NT', category: '保羅書信', totalChapters: 3, theme: '召會生活的井然秩序與健康教訓的建立' },
+  { id: 'PHM', name: '腓利門書', shortName: '門', testament: 'NT', category: '保羅書信', totalChapters: 1, theme: '在基督身體裡信徒地位的平等與愛中彼此接納的見證' },
+  { id: 'HEB', name: '希伯來書', shortName: '來', testament: 'NT', category: '保羅書信', totalChapters: 13, theme: '基督超越猶太教的一切：更好的約、更美的大祭司，拯救到底' },
+  { id: 'JAS', name: '雅各書', shortName: '雅', testament: 'NT', category: '普通書信', totalChapters: 5, theme: '基督徒實行的完全，真實活的信心顯於行為與忍耐' },
+  { id: '1PE', name: '彼得前書', shortName: '彼前', testament: 'NT', category: '普通書信', totalChapters: 5, theme: '神全般恩典中的苦難與榮耀，君尊的祭司體系與活石建造' },
+  { id: '2PE', name: '彼得後書', shortName: '彼後', testament: 'NT', category: '普通書信', totalChapters: 3, theme: '神聖能力的供給，有分於神的性情，防備背道與譏誚者' },
+  { id: '1JN', name: '約翰一書', shortName: '約壹', testament: 'NT', category: '普通書信', totalChapters: 5, theme: '神聖生命的交通、神聖真理的膏油塗抹與神聖之愛的實行' },
+  { id: '2JN', name: '約翰二書', shortName: '約貳', testament: 'NT', category: '普通書信', totalChapters: 1, theme: '在真理與愛中行事，拒絕越過基督教訓之異端' },
+  { id: '3JN', name: '約翰三書', shortName: '約叄', testament: 'NT', category: '普通書信', totalChapters: 1, theme: '接待與同工真理的弟兄，警戒好為首者的敗壞' },
+  { id: 'JUD', name: '猶大書', shortName: '猶', testament: 'NT', category: '普通書信', totalChapters: 1, theme: '為一次交付聖徒的信仰竭力爭辯，保守自己在神的愛中' },
+  { id: 'REV', name: '啟示錄', shortName: '啟', testament: 'NT', category: '啟示錄', totalChapters: 22, theme: '基督的見證與終極完成：七倍加強的靈、金燈臺、得勝者與新耶路撒冷' },
+];

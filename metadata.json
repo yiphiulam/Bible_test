@@ -1,0 +1,6 @@
+{
+  "name": "恢復本與職事神學問答引導引擎",
+  "description": "專門服務於《恢復本聖經》與倪柝聲、李常受職事文集的高精度神學問答與查經引導引擎，具備階層語境包檢索、微斷言原子化溯源與雙向高亮渲染。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
